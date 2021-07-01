@@ -1,0 +1,184 @@
+/* Start Variables */
+:root {
+  --black: #312009;
+  --brown: #aa6141;
+  --gray: #3a3327;
+  --beige: #f2bca7;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  font-family: "Bitter", serif;
+  font-size: 18px;
+  backdrop-filter: blur(5px);
+}
+
+.container {
+  width: 350px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+/* End Global Rules */
+
+/* Start Header */
+header {
+  padding: 20px 0;
+  text-align: center;
+}
+header h1 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--black);
+}
+
+header figure {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+header figure img {
+  width: 80%;
+}
+
+section {
+  color: var(--gray);
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+section h2 {
+  text-transform: uppercase;
+  color: brown;
+  font-weight: 400;
+  border-top: 1px var(--black) solid;
+  border-bottom: 1px var(--black) solid;
+  margin-bottom: 15px;
+}
+
+section .prices {
+  font-style: italic;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+section .prices span:first-child {
+  margin-right: 10px;
+}
+
+section article {
+  margin-bottom: 20px;
+}
+
+section article .title {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+section article p {
+  font-size: 15px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-column-gap: 20px;
+}
+
+footer {
+  padding: 40px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+footer .links {
+  margin-bottom: 30px;
+}
+
+footer .links span:first-child {
+  margin-right: 10px;
+}
+
+footer .links a {
+  text-decoration: none;
+  display: block;
+  color: var(--gray);
+  font-size: 15px;
+}
+
+footer .links a:first-child {
+  margin-bottom: 5px;
+}
+
+footer .hours {
+  background-color: var(--brown);
+  color: hsl(200 50% 90%);
+  padding: 15px;
+  width: 100%;
+  font-size: 15px;
+}
+
+footer .hours th {
+  padding-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+/* End Header */
+
+/* Start Desktop */
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 4%;
+    justify-content: flex-start;
+  }
+
+  .container header {
+    order: 1;
+  }
+
+  .container footer {
+    grid-row: 2 /3;
+  }
+
+  .container main {
+    order: 3;
+    grid-row: span 3;
+  }
+}
+/* End Desktop */
